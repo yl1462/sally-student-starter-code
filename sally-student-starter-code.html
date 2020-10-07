@@ -34,21 +34,22 @@
             return (
                 <section id="introduction">
                     <p>Hi I'm {props.name}, I'm 25 and below this line you'll find more information about me.</p>
-                </section>
-                <br>
+                    <br />
+                </section> 
             )
         }
 
         function Education(props) {
             return (
                 <section id="Education">
-                <p>I have studied at:</p>
-                <ul>
-                    <li>IES BEZMILIANA</li>
-                    <li>Minnesota University</li>
-                </ul>
+                    <p>I have studied at:</p>
+                    <ul>
+                        <li>IES BEZMILIANA</li>
+                        <li>Minnesota University</li>
+                    </ul>
+                    <br />
             </section>
-            <br>
+            
             )
         }
 
@@ -66,8 +67,8 @@
                         </li>
                     </ul>
                 </div>
+                <br />
                 </section>
-                <br>
             )
         }
 
@@ -80,6 +81,7 @@
                             <p>My email is: <a href="mailto://sally@IntenetExplorer.old">sally@IntenetExplorer.old</a></p>
                             <p>My phone number is: <a href="tel:+34100572415">+34 100 57 24 15</a></p>
                         </address>
+                        <br />
                     </section>
                 )
             }
@@ -89,7 +91,7 @@
                 const studentName = "Sally Student"
                 return (
                     <div>
-                        <Header />
+
                         <main className={props.className}>
                             {props.children}
                         </main>
@@ -98,9 +100,16 @@
             }
 
             ReactDOM.render(
-                <App className='resume'>
-                    <ContactSection />
-                    <
+        
+                    <App className='resume'>
+                        <Header />
+                        <Introduction />
+                        <Education />
+                        <Works />
+                        <ContactSection />
+                    </App>,
+              
+                document.querySelector('#app')
             )
 
     </script>
